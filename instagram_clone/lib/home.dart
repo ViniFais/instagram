@@ -18,27 +18,33 @@ class _homeState extends State<home> {
           style: TextStyle(fontWeight: FontWeight.w900, color: Colors.black),
         ),
         actions: <Widget>[
-          SizedBox(
-            width: 23,
-            height: 23,
-            child: Image.asset("assets/imagens/icone5.png"),
-          ),
-          SizedBox(
-            width: 15,
-          ),
-          SizedBox(
-            width: 23,
-            height: 23,
-            child: Image.asset("assets/imagens/icone1.png"),
-          ),
+          Ink.image(
+              image: const AssetImage("assets/imagens/icone5.png"),
+              width: 23,
+              height: 23,
+              child: InkWell(
+                onTap: () {},
+              )),
           SizedBox(
             width: 15,
           ),
+          Ink.image(
+              image: const AssetImage("assets/imagens/icone1.png"),
+              width: 23,
+              height: 23,
+              child: InkWell(
+                onTap: () {},
+              )),
           SizedBox(
-            width: 23,
-            height: 23,
-            child: Image.asset("assets/imagens/icone10.png"),
+            width: 15,
           ),
+          Ink.image(
+              image: const AssetImage("assets/imagens/icone10.png"),
+              width: 23,
+              height: 23,
+              child: InkWell(
+                onTap: () {},
+              )),
           SizedBox(
             width: 10,
           ),
@@ -47,8 +53,9 @@ class _homeState extends State<home> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-/*=============================================================================
---------------------------Stores do Instagram-------------------------------
+/*
+===============================================================================
+--------------------------Stores do Instagram-----------------------
 ===============================================================================
 */
             Padding(
@@ -238,11 +245,13 @@ class _homeState extends State<home> {
                         ),
                         Text("Nike")
                       ]),
+                      SizedBox(width:10),
                     ],
                   )),
             ),
-/*=============================================================================
---------------------------Postagen 1 do Instagram-------------------------------
+/*
+===============================================================================
+--------------------------Postagem1 do Instagram-----------------------
 ===============================================================================
 */
             Padding(
@@ -263,26 +272,27 @@ class _homeState extends State<home> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
-                      SizedBox(
-                        width: 5,
-                      ),
-                      SizedBox(
-                        width: 50,
-                        height: 50,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(100),
-                            border: Border.all(
-                              color: Color.fromARGB(255, 49, 0, 224),
-                              width: 2.0,
-                              style: BorderStyle.solid,
+                      SizedBox(width: 2),
+                      InkWell(
+                        onTap: () {},
+                        child: SizedBox(
+                          width: 50,
+                          height: 50,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(100),
+                              border: Border.all(
+                                color: Color.fromARGB(255, 49, 0, 224),
+                                width: 2.0,
+                                style: BorderStyle.solid,
+                              ),
+                              image: DecorationImage(
+                                  image: NetworkImage(
+                                    "https://t.ctcdn.com.br/JAFMRUAI1wlkJgqHhILZhC88aU4=/1400x788/smart/filters:format(webp)/i516333.jpeg",
+                                  ),
+                                  fit: BoxFit.cover),
                             ),
-                            image: DecorationImage(
-                                image: NetworkImage(
-                                  "https://t.ctcdn.com.br/JAFMRUAI1wlkJgqHhILZhC88aU4=/1400x788/smart/filters:format(webp)/i516333.jpeg",
-                                ),
-                                fit: BoxFit.cover),
                           ),
                         ),
                       ),
@@ -308,29 +318,45 @@ class _homeState extends State<home> {
             Row(
               children: <Widget>[
                 Padding(
-                    padding: EdgeInsets.only(top: 10, left: 10),
-                    child: SizedBox(
-                        width: 27,
-                        height: 27,
-                        child: Image.asset('assets/imagens/icone1.png'))),
+                  padding: EdgeInsets.only(top: 10, left: 10),
+                  child: Ink.image(
+                      image: const AssetImage("assets/imagens/icone1.png"),
+                      width: 27,
+                      height: 27,
+                      child: InkWell(
+                        onTap: () {},
+                      )),
+                ),
                 Padding(
-                    padding: EdgeInsets.only(top: 10, left: 10),
-                    child: SizedBox(
-                        width: 25,
-                        height: 25,
-                        child: Image.asset('assets/imagens/icone2.png'))),
+                  padding: EdgeInsets.only(top: 10, left: 10),
+                  child: Ink.image(
+                      image: const AssetImage("assets/imagens/icone2.png"),
+                      width: 24,
+                      height: 24,
+                      child: InkWell(
+                        onTap: () {},
+                      )),
+                ),
                 Padding(
-                    padding: EdgeInsets.only(top: 10, left: 10),
-                    child: SizedBox(
-                        width: 24,
-                        height: 24,
-                        child: Image.asset('assets/imagens/icone3.png'))),
+                  padding: EdgeInsets.only(top: 10, left: 10),
+                  child: Ink.image(
+                      image: const AssetImage("assets/imagens/icone3.png"),
+                      width: 24,
+                      height: 24,
+                      child: InkWell(
+                        onTap: () {},
+                      )),
+                ),
                 Padding(
-                    padding: EdgeInsets.only(top: 10, left: 160),
-                    child: SizedBox(
-                        width: 27,
-                        height: 27,
-                        child: Image.asset('assets/imagens/icone4.png'))),
+                  padding: EdgeInsets.only(top: 10, left: 160),
+                  child: Ink.image(
+                      image: const AssetImage("assets/imagens/icone4.png"),
+                      width: 27,
+                      height: 27,
+                      child: InkWell(
+                        onTap: () {},
+                      )),
+                )
               ],
             ),
             SizedBox(
@@ -366,10 +392,12 @@ class _homeState extends State<home> {
                 SizedBox(
                   width: 5,
                 ),
-                Text("Ver comentarios",
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 70, 69, 69),
-                    ))
+                InkWell(
+                    onTap: () {},
+                    child: Text("Ver comentarios",
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 70, 69, 69),
+                        )))
               ],
             ),
             SizedBox(
@@ -403,11 +431,14 @@ class _homeState extends State<home> {
                 SizedBox(
                   width: 10,
                 ),
-                Text(
-                  "Adicione um comentario...",
-                  style: TextStyle(
-                      color: Color.fromARGB(255, 80, 80, 80), fontSize: 14),
-                ),
+                InkWell(
+                  onTap: () {},
+                  child: Text(
+                    "Adicione um comentario...",
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 80, 80, 80), fontSize: 14),
+                  ),
+                )
               ],
             ),
             SizedBox(
@@ -423,16 +454,18 @@ class _homeState extends State<home> {
                   style: TextStyle(
                       color: Color.fromARGB(255, 80, 80, 80), fontSize: 10),
                 ),
-                Text(
-                  'Ver tradução',
-                  style: TextStyle(
-                      color: Color.fromARGB(255, 0, 0, 0), fontSize: 10),
-                )
+                InkWell(
+                    onTap: () {},
+                    child: Text(
+                      'Ver tradução',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 0, 0, 0), fontSize: 10),
+                    )),
               ],
             ),
-
-/*=============================================================================
---------------------------Postagen 2 do Instagram-------------------------------
+/*
+===============================================================================
+--------------------------Postagem2 do Instagram-----------------------
 ===============================================================================
 */
             Padding(
@@ -442,31 +475,31 @@ class _homeState extends State<home> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  SizedBox(
-                    width: 5,
-                  ),
-                  SizedBox(
-                    width: 50,
-                    height: 50,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(100),
-                        border: Border.all(
-                          color: Color.fromARGB(255, 49, 0, 224),
-                          width: 2.0,
-                          style: BorderStyle.solid,
+                  InkWell(
+                    onTap: () {},
+                    child: SizedBox(
+                      width: 50,
+                      height: 50,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(100),
+                          border: Border.all(
+                            color: Color.fromARGB(255, 49, 0, 224),
+                            width: 2.0,
+                            style: BorderStyle.solid,
+                          ),
+                          image: DecorationImage(
+                              image: NetworkImage(
+                                "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/1200px-BMW.svg.png",
+                              ),
+                              fit: BoxFit.cover),
                         ),
-                        image: DecorationImage(
-                            image: NetworkImage(
-                              "https://t.ctcdn.com.br/JAFMRUAI1wlkJgqHhILZhC88aU4=/1400x788/smart/filters:format(webp)/i516333.jpeg",
-                            ),
-                            fit: BoxFit.cover),
                       ),
                     ),
                   ),
                   Text(
-                    " Instagram",
+                    " BMW",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
@@ -486,28 +519,40 @@ class _homeState extends State<home> {
               children: <Widget>[
                 Padding(
                     padding: EdgeInsets.only(top: 10, left: 10),
-                    child: SizedBox(
+                    child: Ink.image(
+                        image: const AssetImage("assets/imagens/icone1.png"),
                         width: 27,
                         height: 27,
-                        child: Image.asset('assets/imagens/icone1.png'))),
+                        child: InkWell(
+                          onTap: () {},
+                        ))),
                 Padding(
                     padding: EdgeInsets.only(top: 10, left: 10),
-                    child: SizedBox(
+                    child: Ink.image(
+                        image: const AssetImage("assets/imagens/icone2.png"),
                         width: 25,
                         height: 25,
-                        child: Image.asset('assets/imagens/icone2.png'))),
+                        child: InkWell(
+                          onTap: () {},
+                        ))),
                 Padding(
                     padding: EdgeInsets.only(top: 10, left: 10),
-                    child: SizedBox(
-                        width: 24,
-                        height: 24,
-                        child: Image.asset('assets/imagens/icone3.png'))),
+                    child: Ink.image(
+                        image: const AssetImage("assets/imagens/icone3.png"),
+                        width: 25,
+                        height: 25,
+                        child: InkWell(
+                          onTap: () {},
+                        ))),
                 Padding(
                     padding: EdgeInsets.only(top: 10, left: 160),
-                    child: SizedBox(
+                    child: Ink.image(
+                        image: const AssetImage("assets/imagens/icone4.png"),
                         width: 27,
                         height: 27,
-                        child: Image.asset('assets/imagens/icone4.png'))),
+                        child: InkWell(
+                          onTap: () {},
+                        ))),
               ],
             ),
             SizedBox(
@@ -517,22 +562,25 @@ class _homeState extends State<home> {
               children: <Widget>[
                 SizedBox(width: 5),
                 Text(
-                  "1.000 curtidas",
+                  "5.000 curtidas",
                   style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
                 ),
               ],
+            ),
+            SizedBox(
+              height: 5,
             ),
             Row(
               children: <Widget>[
                 SizedBox(width: 5),
                 Text(
-                  "Instagram",
+                  "BMW",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
                   width: 5,
                 ),
-                Text("Hello, Welcome")
+                Text(" New Car...")
               ],
             ),
             SizedBox(
@@ -543,10 +591,13 @@ class _homeState extends State<home> {
                 SizedBox(
                   width: 5,
                 ),
-                Text("Ver comentarios",
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 70, 69, 69),
-                    ))
+                InkWell(
+                  onTap: () {},
+                  child: Text("Ver comentarios",
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 70, 69, 69),
+                      )),
+                )
               ],
             ),
             SizedBox(
@@ -580,11 +631,14 @@ class _homeState extends State<home> {
                 SizedBox(
                   width: 10,
                 ),
-                Text(
-                  "Adicione um comentario...",
-                  style: TextStyle(
-                      color: Color.fromARGB(255, 80, 80, 80), fontSize: 14),
-                ),
+                InkWell(
+                  onTap: () {},
+                  child: Text(
+                    "Adicione um comentario...",
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 80, 80, 80), fontSize: 14),
+                  ),
+                )
               ],
             ),
             SizedBox(
@@ -596,14 +650,17 @@ class _homeState extends State<home> {
                   width: 10,
                 ),
                 Text(
-                  "há 10 minutos ",
+                  "há 1 hora ",
                   style: TextStyle(
                       color: Color.fromARGB(255, 80, 80, 80), fontSize: 10),
                 ),
-                Text(
-                  'Ver tradução',
-                  style: TextStyle(
-                      color: Color.fromARGB(255, 0, 0, 0), fontSize: 10),
+                InkWell(
+                  onTap: () {},
+                  child: Text(
+                    'Ver tradução',
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 0, 0, 0), fontSize: 10),
+                  ),
                 )
               ],
             ),
@@ -613,8 +670,9 @@ class _homeState extends State<home> {
           ],
         ),
       ),
-/*=============================================================================
---------------------------Rodapé do Instagram-------------------------------
+/*
+===============================================================================
+--------------------------Bottom Navigation do Instagram-----------------------
 ===============================================================================
 */
       bottomNavigationBar: Container(
@@ -633,40 +691,55 @@ class _homeState extends State<home> {
           child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                SizedBox(
+                InkWell(
+                  onTap: () {},
+                  child: Image.asset(
+                    "assets/imagens/icone6.png",
                     width: 24,
                     height: 24,
-                    child: Image.asset("assets/imagens/icone6.png")),
-                SizedBox(
-                    width: 24,
-                    height: 24,
-                    child: Image.asset("assets/imagens/icone7.png")),
-                SizedBox(
-                    width: 24,
-                    height: 24,
-                    child: Image.asset("assets/imagens/icone8.png")),
-                SizedBox(
-                    width: 24,
-                    height: 24,
-                    child: Image.asset("assets/imagens/icone9.png")),
-                SizedBox(
-                    width: 30,
-                    height: 30,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(100),
-                        border: Border.all(
-                          color: Color.fromARGB(255, 49, 0, 224),
-                          width: 2.0,
-                          style: BorderStyle.solid,
-                        ),
-                        image: DecorationImage(
-                            image: NetworkImage(
-                                "https://www.ifmg.edu.br/portal/ensino/bibliotecas/Instagran.jpg/@@images/image.png"),
-                            fit: BoxFit.cover),
-                      ),
-                    ))
+                  ),
+                ),
+                InkWell(
+                    onTap: () {},
+                    child: Image.asset(
+                      "assets/imagens/icone7.png",
+                      width: 24,
+                      height: 24,
+                    )),
+                InkWell(
+                    onTap: () {},
+                    child: Image.asset(
+                      "assets/imagens/icone8.png",
+                      width: 24,
+                      height: 24,
+                    )),
+                InkWell(
+                    onTap: () {},
+                    child: Image.asset(
+                      "assets/imagens/icone9.png",
+                      width: 24,
+                      height: 24,
+                    )),
+                InkWell(
+                    onTap: () {},
+                    child: SizedBox(
+                        width: 30,
+                        height: 30,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(100),
+                            border: Border.all(
+                              color: Color.fromARGB(255, 49, 0, 224),
+                              width: 2.0,
+                              style: BorderStyle.solid,
+                            ),
+                            image: DecorationImage(
+                                image: NetworkImage(
+                                    "https://www.ifmg.edu.br/portal/ensino/bibliotecas/Instagran.jpg/@@images/image.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        )))
               ]),
         ),
       ),
