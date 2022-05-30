@@ -1,4 +1,4 @@
-# Instagram
+# Instagram 📱
  Clone do Instagram feito em flutter
 # Status
  🟡 Recebendo atualizações
