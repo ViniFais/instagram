@@ -1,7 +1,7 @@
 # Instagram
  Clone do Instagram feito em flutter
 # Status
- 🟡 Recendo atualizações
+ 🟡 Recebendo atualizações
 # imagens do App
 ![img](instagram_clone/imagensGithub/img1.png)
 ![img](instagram_clone/imagensGithub/img2.png)
