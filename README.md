@@ -2,7 +2,7 @@
  Clone do Instagram feito em Flutter
  
 # Status
- 🟡 Recebendo atualizações
+ 🟢 Concluido
  
  # 🔨 Ferramentas usadas
 <ul>
